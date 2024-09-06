@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RadioHajen</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="player-div">
+        <audio id="player">
+            <source src="" type="audio/mpeg">
+        </audio>
+
+        <img id="album-art" src="" alt="Album Art">
+
+        <div id="episode-info"></div>
+
+        <div id="progress-container">
+            <div id="progress-bar">
+                <div id="progress"></div>
+            </div>
+            <span id="current-time" class="time">0:00</span>
+            <span id="duration" class="time">0:00</span>
+        </div>
+
+        <div id="debug-controls">
+            <button id="play-button">Play</button>
+            <button id="next-button">Next</button>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
+

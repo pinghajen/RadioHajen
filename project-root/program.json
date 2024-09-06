@@ -1,0 +1,32 @@
+{
+  "program": [0, 1],
+  "shows": {
+    "0": {
+      "name": "Dimension X",
+      "description": "Show description here",
+      "episodes": {
+        "0": {
+          "name": "Episode 1",
+          "description": "Episode description here",
+          "album_art": "assets/images/OTRR_Dimension_X_Singles.jpg",
+          "location_on_disk": "assets/audio/Dimension_X_1950-04-08__01_OuterLimit.mp3",
+          "length": "0:00"
+        }
+      }
+    },
+    "1": {
+      "name": "Jeff Regan, Investigator",
+      "description": "Show description here",
+      "episodes": {
+        "0": {
+          "name": "Episode 1",
+          "description": "Episode description here",
+          "album_art": "assets/images/OTRR_Jeff_Regan_Singles.jpg",
+          "location_on_disk": "assets/audio/Jeff Regan, Investigator 1948-07-17 The Prodigal Daughter.mp3",
+          "length": "0:00"
+        }
+      }
+    }
+  }
+}
+
