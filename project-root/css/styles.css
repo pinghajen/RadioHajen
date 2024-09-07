@@ -1,14 +1,19 @@
 .player-div {
     width: 100%;
-    max-width: 1920px;
-    height: 0;
-    padding-bottom: 56.25%; /* 9/16 = 0.5625 */
+    max-width: 1280px;
+    max-height: 720px;
+    height: 720px;
     position: relative;
-    overflow: hidden;
+    overflow: visible;
     background-color: #000000;
     min-width: 1280px;
     min-height: 720px;
     margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    overflow: hidden;
+    justify-content: flex-start;
 }
 
 .player-div > * {
@@ -16,11 +21,10 @@
 }
 
 #album-art {
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    max-width: 50%;
-    max-height: 50%;
+    position: relative;
+    left: 12%;
+    max-width: 30%;
+    max-height: 80%;
     object-fit: contain;
 }
 
@@ -74,17 +78,19 @@
 }
 
 #debug-controls {
+    position: absolute;
     bottom: 20px;
     left: 0;
     right: 0;
     display: flex;
     justify-content: center;
     gap: 20px;
+    z-index: 10;
 }
 
 #play-button, #next-button {
     background-color: rgba(255, 255, 255, 0.2);
-    color: #ffffff;
+    color: #000000;
     border: none;
     padding: 10px 20px;
     cursor: pointer;

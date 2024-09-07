@@ -10,6 +10,7 @@ fetch("program.json")
     play(currentShowIndex, currentEpisodeIndex);
   });
 
+
 function play(showIndex, episodeIndex) {
   const show = shows[showIndex];
   if (!show) {
@@ -28,6 +29,7 @@ function play(showIndex, episodeIndex) {
   updateEpisodeInfo(show.name, episode.name);
 }
 
+
 function playAudio() {
   const audio = document.getElementById('player');
   const playButton = document.getElementById('play-button');
@@ -40,6 +42,7 @@ function playAudio() {
     playButton.textContent = 'Play';
   }
 }
+
 
 function nextEpisode() {
   const currentShow = shows[currentShowIndex];
@@ -55,6 +58,7 @@ function nextEpisode() {
   playAudio();
 }
 
+
 function setAudioSource(sourceUrl) {
   const audio = document.getElementById('player');
   audio.addEventListener('loadedmetadata', function() {
@@ -66,15 +70,18 @@ function setAudioSource(sourceUrl) {
   audio.load(); // Important: reload the audio element after changing the source
 }
 
+
 function setAlbumArt(sourceUrl) {
   const img = document.getElementById('album-art');
   img.src = sourceUrl;
 }
 
+
 function updateEpisodeInfo(showName, episodeName) {
   const infoElement = document.getElementById('episode-info');
   infoElement.textContent = `${showName} - ${episodeName}`;
 }
+
 
 function updateProgressBar() {
   const audio = document.getElementById('player');
@@ -87,6 +94,7 @@ function updateProgressBar() {
   currentTime.textContent = formatTime(audio.currentTime);
 }
 
+
 function initializeProgressBar() {
   const audio = document.getElementById('player');
   const duration = document.getElementById('duration');
@@ -94,17 +102,20 @@ function initializeProgressBar() {
   duration.textContent = formatTime(audio.duration);
 }
 
+
 function formatTime(timeInSeconds) {
   const minutes = Math.floor(timeInSeconds / 60);
   const seconds = Math.floor(timeInSeconds % 60);
   return `${minutes}:${seconds.toString().padStart(2, '0')}`;
 }
 
+
 function updateDuration() {
   const audio = document.getElementById('player');
   const duration = document.getElementById('duration');
   duration.textContent = formatTime(audio.duration);
 }
+
 
 function seekAudio(event) {
   const audio = document.getElementById('player');
